@@ -27,14 +27,14 @@
 
 		<script type="text/javascript">
 
-			var x = y = z = 0;
+			var z = 0;
 			var a = 0;
-			var sub = document.getElementById( 'b' );
-			var aub = document.getElementById( 'c' );
+			var outer = document.getElementById( 'b' );
+			var inner = document.getElementById( 'c' );
 			var down = true;
 			var right = true;
-			var height = sub.clientHeight - aub.clientHeight;
-			var width = sub.clientWidth - aub.clientWidth;
+			var height = outer.clientHeight - inner.clientHeight;
+			var width = outer.clientWidth - inner.clientWidth;
 
 			setInterval( function() {
 				if ( down ) {
@@ -64,8 +64,8 @@
 				else if ( a == 0 ){
 					right = true;
 				}
-				aub.style.marginLeft = a + 'px';
-				aub.style.marginTop = z + 'px';
+				inner.style.marginLeft = a + 'px';
+				inner.style.marginTop = z + 'px';
 			}, 1 );
 
 		</script>
